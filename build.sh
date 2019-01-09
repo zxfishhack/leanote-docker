@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#go get github.com/revel/cmd/revel
-#go get -u github.com/leanote/leanote/app
+go get github.com/revel/cmd/revel
+go get -u github.com/leanote/leanote/app
 
 revel build -t leanote -a $GOPATH/src/github.com/leanote/leanote
 
