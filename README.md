@@ -3,7 +3,7 @@
 `leanote`容器镜像生成
 
 ## Build
-运行`./build.sh`可生成`leanote`容器镜像，使用`github.com/leanote/leanote`的最新版本进行构建。
+运行`./build.sh`可生成`leanote`容器镜像，使用[github.com/leanote/leanote](https://github.com/leanote/leanote)的最新版本进行构建。
 
 # Options
 
