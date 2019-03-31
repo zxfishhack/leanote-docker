@@ -1,0 +1,3 @@
+[submodule "leanote"]
+	path = leanote
+	url = https://github.com/leanote/leanote.git
