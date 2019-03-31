@@ -12,6 +12,6 @@
 
 ## Use
 
-容器中的`/leanote/src/github.com/leanote/leanote/files`路径为上传的文件所存放的路径，使用时需映射，否则存在文件丢失的可能。
+容器中的`/leanote/src/github.com/leanote/leanote/files`、`/leanote/src/github.com/leanote/leanote/public/upload`路径为上传的文件所存放的路径，使用时需映射，否则存在文件丢失的可能。
 
-`docker run -v <主机目录>:/leanote/src/github.com/leanote/leanote/files -p 9000:9000 leanote`
+`docker run -v <主机目录>:/leanote/src/github.com/leanote/leanote/files -v <主机目录>:/leanote/src/github.com/leanote/leanote/public/upload -p 9000:9000 leanote`
