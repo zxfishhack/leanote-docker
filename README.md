@@ -2,7 +2,7 @@
 
 `leanote`容器镜像生成
 
-## Build
+## Build （非必须）
 docker build --build-arg HTTPS_PROXY=<编译使用的代理服务器> -t zxfishhack/leanote .
 
 ## Use
