@@ -3,15 +3,12 @@
 `leanote`容器镜像生成
 
 ## Build
-运行`./build.sh`可生成`leanote`容器镜像，使用[github.com/leanote/leanote](https://github.com/leanote/leanote)的最新版本进行构建。
-
-# Options
-
-1. 若`build.sh`脚本所在目录含有`app.conf`，则会使用`app.conf`覆盖默认。
-1. 若`build.sh`脚本所在目录含有`run.sh`，则会使用`run.sh`覆盖默认。
+docker build --build-arg HTTPS_PROXY=<编译使用的代理服务器> -t zxfishhack/leanote .
 
 ## Use
+运行环境要求：docker、docker-compose
 
-容器中的`/leanote/src/github.com/leanote/leanote/files`、`/leanote/src/github.com/leanote/leanote/public/upload`路径为上传的文件所存放的路径，使用时需映射，否则存在文件丢失的可能。
-
-`docker run -v <主机目录>:/leanote/src/github.com/leanote/leanote/files -v <主机目录>:/leanote/src/github.com/leanote/leanote/public/upload -p 9000:9000 leanote`
+运行步骤：
+1. 修改`app.conf`中的`site.url`，将其修改为leanote使用的域名:端口，默认监听启动机器的9001端口，如需变更，则修改`docker-compose.yaml`中的`services.leanote.ports`中的9001
+1. git submodule update 
+1. docker-compose up -d
