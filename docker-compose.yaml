@@ -9,7 +9,7 @@ services:
       MONGO_INITDB_DATABASE: leanote
     volumes:
       - ./mongodb:/data/db
-      - ./leanote/mongodb_backup/leanote_install_data:/leanote_install_data
+      - ./leanote_install_data:/leanote_install_data
       - ./dbinit.sh:/docker-entrypoint-initdb.d/dbinit.sh
       - ./leanote.js:/leanote.js
   leanote:
@@ -20,8 +20,8 @@ services:
     image: zxfishhack/leanote
     restart: always
     volumes:
-      - ./datas/files:/leanote/src/github.com/leanote/leanote/files
-      - ./datas/upload:/leanote/src/github.com/leanote/leanote/public/upload
-      - ./app.conf:/leanote/src/github.com/leanote/leanote/conf/app.conf
+      - ./datas/files:/leanote/files
+      - ./datas/upload:/leanote/public/upload
+      - ./app.conf:/leanote/conf/app.conf
     ports:
       - 9001:9000 
