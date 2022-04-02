@@ -17,7 +17,7 @@ services:
      - mongo
     links:
      - mongo:mongodb
-    image: zxfishhack/leanote
+    image: zxfishhack/leanote:2.6.1
     restart: always
     volumes:
       - ./datas/files:/leanote/files
