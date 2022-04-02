@@ -17,9 +17,10 @@ services:
      - mongo
     links:
      - mongo:mongodb
-    image: zxfishhack/leanote
+    image: zxfishhack/leanote:2.6.1
     restart: always
     volumes:
+      - /etc/localtime:/etc/localtime
       - ./datas/files:/leanote/files
       - ./datas/upload:/leanote/public/upload
       - ./app.conf:/leanote/conf/app.conf
